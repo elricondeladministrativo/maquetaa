@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Expedientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 📌 Link al CSS -->
+    <link rel="stylesheet" href="css/control_estilos.css">
+</head>
+<body>
+
+<h1>Control de Expedientes</h1>
+
+<!-- Sección: Alerta de expedientes sin movimientos -->
+<section class="alerta-expedientes">
+    <h2>🔔 Expedientes sin movimiento en los últimos 30 días</h2>
+
+    <div class="tabla-container">
+        <table id="tabla_inactivos">
+            <thead>
+                <tr>
+                    <th>N° Expediente</th>
+                    <th>Carátula</th>
+                    <th>Última actuación</th>
+                    <th>Días sin movimiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Acá se cargarán los expedientes inactivos -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Sección: Botones de descarga -->
+<section class="descargar-datos">
+    <h2>📥 Descarga de Datos</h2>
+    <div class="botones-descarga">
+        <button onclick="descargarExpedientes()">Descargar Expedientes</button>
+        <button onclick="descargarHistorial()">Descargar Historial</button>
+    </div>
+</section>
+
+<!-- Sección futura: Estadísticas -->
+<section class="proximamente">
+    <h2>📊 Estadísticas (Próximamente)</h2>
+    <p>Estamos preparando nuevas herramientas para que puedas analizar los datos de manera avanzada.</p>
+</section>
+
+<!-- 📌 Link al JavaScript -->
+<script src="js/control_expedientes.js"></script>
+
+</body>
+</html>

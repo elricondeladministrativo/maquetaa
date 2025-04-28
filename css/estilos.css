@@ -1,0 +1,118 @@
+/* Estilo general del cuerpo */
+body {
+    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Estilos del formulario */
+form {
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Contenedor de dos columnas */
+.contenedor-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Cada columna */
+.columna {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos de los labels */
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* Inputs, select, textarea */
+input, select, textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Botones */
+button {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover del botón */
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo para el contenedor de involucrados */
+#involucrados_container {
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* Lista de involucrados */
+#involucrados_container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Ítems de involucrados */
+#involucrados_container ul li {
+    background-color: #dfe6e9;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+/* Contenedor para centrar el botón final */
+.boton-centrado {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+    .contenedor-formulario {
+        flex-direction: column;
+    }
+    .columna {
+        flex: 1 1 100%;
+    }
+}

@@ -1,0 +1,140 @@
+/* Estilo general del cuerpo */
+body {
+    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Buscador */
+.buscador-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.buscador-container input {
+    width: 300px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+}
+
+.buscador-container button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.buscador-container button:hover {
+    background-color: #2980b9;
+}
+
+/* Tabla de expedientes */
+.tabla-container {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Contenedor del último movimiento */
+#ultimo_movimiento_container {
+    margin-bottom: 30px;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Formulario nueva actuación */
+#nueva_actuacion_container {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#nueva_actuacion_container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#nueva_actuacion_container label {
+    font-weight: bold;
+    color: #34495e;
+}
+
+#nueva_actuacion_container input, 
+#nueva_actuacion_container textarea {
+    padding: 8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#nueva_actuacion_container button {
+    align-self: center;
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#nueva_actuacion_container button:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+    .buscador-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buscador-container input {
+        width: 100%;
+    }
+}

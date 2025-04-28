@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Expedientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 📌 Link al CSS -->
+    <link rel="stylesheet" href="css/consulta_estilos.css">
+</head>
+<body>
+
+<h1>Consulta de Expedientes</h1>
+
+<!-- Buscador -->
+<div class="buscador-container">
+    <input type="text" id="buscar_expediente" placeholder="Buscar por N° Expediente o N° AP">
+    <button onclick="buscarExpediente()">Buscar</button>
+</div>
+
+<!-- Tabla de resultados -->
+<div class="tabla-container">
+    <table id="tabla_expedientes">
+        <thead>
+            <tr>
+                <th>N° Expediente</th>
+                <th>N° AP</th>
+                <th>Carátula</th>
+                <th>Estado de la Causa</th>
+                <th>Personal Asignado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se van a cargar los expedientes -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Último Movimiento -->
+<div id="ultimo_movimiento_container" style="display:none;">
+    <h2>Último Movimiento</h2>
+    <div id="ultimo_movimiento"></div>
+</div>
+
+<!-- Nueva Actuación -->
+<div id="nueva_actuacion_container" style="display:none;">
+    <h2>Registrar Nueva Actuación</h2>
+    <form id="formNuevaActuacion">
+        <label for="fecha_nueva">Fecha:</label>
+        <input type="date" id="fecha_nueva" required>
+
+        <label for="hora_nueva">Hora:</label>
+        <input type="time" id="hora_nueva" required>
+
+        <label for="accion_nueva">Acción Realizada:</label>
+        <input type="text" id="accion_nueva" required>
+
+        <label for="observaciones_nueva">Observaciones (opcional):</label>
+        <textarea id="observaciones_nueva" rows="3"></textarea>
+
+        <button type="button" onclick="guardarNuevaActuacion()">Guardar Actuación</button>
+    </form>
+</div>
+
+<!-- 📌 Link al JavaScript -->
+<script src="js/consulta_expedientes.js"></script>
+
+</body>
+</html>

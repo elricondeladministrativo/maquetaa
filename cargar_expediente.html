@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cargar Expediente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 📌 Link al CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<h1>Cargar Expediente</h1>
+
+<form id="formExpediente">
+    <div class="contenedor-formulario">
+        
+        <!-- Columna Izquierda -->
+        <div class="columna">
+
+            <label for="n_ex">N° Expediente</label>
+            <input type="text" id="n_ex" required>
+
+            <label for="n_ap">N° AP</label>
+            <input type="text" id="n_ap" required>
+
+            <label for="caratula">Carátula</label>
+            <input type="text" id="caratula" required>
+
+            <label for="asignado_a">Expediente asignado a</label>
+            <input type="text" id="asignado_a" required>
+
+            <label for="buscar_legajo">Buscar Personal (por Legajo)</label>
+            <input type="text" id="buscar_legajo">
+            <button type="button" onclick="buscarPersonal()">Buscar Personal</button>
+
+            <div id="resultado_personal"></div>
+
+            <button type="button" onclick="agregarInvolucrado()">Agregar Involucrado</button>
+
+            <div id="involucrados_container">
+                <strong>Involucrados agregados:</strong>
+                <ul id="lista_involucrados"></ul>
+            </div>
+
+            <label for="juzgado">Juzgado / Fiscalía</label>
+            <input type="text" id="juzgado" required>
+
+            <label for="estado_causa">Estado de la Causa</label>
+            <input type="text" id="estado_causa" required>
+
+            <label for="fecha_inicio">Fecha de Inicio de Actuaciones</label>
+            <input type="date" id="fecha_inicio" required>
+
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="columna">
+
+            <label for="lugar_hecho">Lugar del Hecho</label>
+            <input type="text" id="lugar_hecho" required>
+
+            <label for="fecha_hecho">Fecha del Hecho</label>
+            <input type="date" id="fecha_hecho" required>
+
+            <label for="modalidad">Modalidad de Desplazamiento</label>
+            <select id="modalidad" required>
+                <option value="">-- Seleccione --</option>
+                <option value="Automóvil">Automóvil</option>
+                <option value="Motovehículo">Motovehículo</option>
+                <option value="Transporte Público">Transporte Público</option>
+                <option value="A pie">A pie</option>
+            </select>
+
+            <label for="policial_herido">Personal Policial Herido (Cantidad)</label>
+            <input type="number" id="policial_herido" min="0" value="0">
+
+            <label for="civil_herido">Civil Herido (Cantidad)</label>
+            <input type="number" id="civil_herido" min="0" value="0">
+
+            <label for="elemento">Elemento: Sustraído / Dañado</label>
+            <input type="text" id="elemento">
+
+            <label for="ubicacion_elemento">Ubicación del Elemento Institucional</label>
+            <input type="text" id="ubicacion_elemento">
+
+            <label for="dependencia">Dependencia de revista al momento del hecho</label>
+            <input type="text" id="dependencia">
+
+            <label for="situacion">Situación en que se encontraba</label>
+            <select id="situacion" required>
+                <option value="">-- Seleccione --</option>
+                <option value="Franco de servicio">Franco de servicio</option>
+                <option value="En servicio">En servicio</option>
+                <option value="Ínterin">Ínterin</option>
+            </select>
+
+            <label for="observaciones">Observaciones (opcional)</label>
+            <textarea id="observaciones" rows="3"></textarea>
+
+        </div>
+
+    </div>
+
+    <!-- Botón Guardar Expediente -->
+    <div class="boton-centrado">
+        <button type="button" onclick="guardarExpediente()">Guardar Expediente</button>
+    </div>
+
+</form>
+
+<!-- 📌 Link al JavaScript -->
+<script src="js/cargar_expediente.js"></script>
+
+</body>
+</html>
